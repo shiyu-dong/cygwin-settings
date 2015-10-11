@@ -231,3 +231,5 @@ export CSCOPE_DB=$HOME/cscope/cscope.out
 
 VIMRUNTIME=/usr/bin
 EDITOR=/usr/bin/vim
+
+source ~/bin/git-completion.bash

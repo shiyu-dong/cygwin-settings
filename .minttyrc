@@ -22,3 +22,4 @@ FontHeight=10
 Columns=160
 Rows=48
 RightClickAction=paste
+CursorType=block
