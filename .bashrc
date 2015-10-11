@@ -215,16 +215,18 @@ alias rts='find -type f \( -iname \*.c -o -iname \*.cpp -o -iname \*.h \) -print
 alias open='cygstart'
 
 cstag() {
-  rm -f cscope.files
-  echo Creating list of files in system ...
-  find $PWD -name '*.[chlyCGHL]' -print > cscope.files
-  find $PWD -name '*.cpp' -print >> cscope.files
-  find $PWD -name '*.cc' -print >> cscope.files
-  find $PWD -name '*.hh' -print >> cscope.files
-  echo Building Cscope database ...
-  cscope -bi cscope.files
-  CSCOPE_DB=$PWD/cscope.out
-  export CSCOPE_DB
+    rm -f cscope.files
+    echo Creating list of files in system ...
+    find $PWD -path ./.repo -prune -o -name '*.[chlyCGHL]' -print > cscope.files
+    find $PWD -path ./.repo -prune -o -name '*.cpp' -print >> cscope.files
+    find $PWD -path ./.repo -prune -o -name '*.cc' -print >> cscope.files
+    find $PWD -path ./.repo -prune -o -name '*.hh' -print >> cscope.files
+    find $PWD -path ./.repo -prune -o -name '*.py' -print >> cscope.files
+    find $PWD -path ./.repo -prune -o -name '*.java' -print >> cscope.files
+    echo Building Cscope database ...
+    cscope -b -R -q -k
+    mv $PWD/cscope.* $HOME/cscope
+    export CSCOPE_DB=$HOME/cscope/cscope.out
 }
 
 export PATH=$PATH:$HOME/bin

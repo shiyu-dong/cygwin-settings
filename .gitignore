@@ -45,6 +45,7 @@ _viminfo
 .xsession.local
 .xsession-errors
 .xsession-errors.old
+cscope/
 Documents/
 Downloads/
 git/
