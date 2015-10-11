@@ -212,6 +212,7 @@ alias b4='cd ../../../..'
 alias b5='cd ../../../../..'
 alias chnex='find -type f \( -iname \*.c -o -iname \*.cpp -o -iname \*.h \) -exec chmod -x \{\} \;'
 alias rts='find -type f \( -iname \*.c -o -iname \*.cpp -o -iname \*.h \) -print0 | xargs -0 sed -i '' -E "s/[[:space:]]*$//" '
+alias open='cygstart'
 
 cstag() {
   rm -f cscope.files
@@ -226,7 +227,7 @@ cstag() {
   export CSCOPE_DB
 }
 
-export PATH=$PATH:/sbin:$HOME/local/bin
+export PATH=$PATH:$HOME/bin
 export CSCOPE_DB=$HOME/cscope/cscope.out
 
 VIMRUNTIME=/usr/bin
