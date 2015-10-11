@@ -1,33 +1,29 @@
 [user]
-  name = Shiyu Dong
-  email = shiyud@utexas.edu
-[review "review-android.quicinc.com"]
-  username = shiyud
-[review "github.com"]
-  username = shiyu-dong
+    name = shiyu-dong
+	email = shiyud@utexas.edu
 [format]
-	numbered = auto
+    numbered = auto
 [color]
-  ui = auto
-  branch = auto
-  diff = auto
-  status = auto
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 [credential]
-  helper = cache --timeout=3600
+    helper = cache --timeout=3600
 [push]
-  default = matching
+    default = matching
 [core]
-  editor = vim
+    editor = vim
