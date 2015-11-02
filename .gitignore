@@ -3,6 +3,7 @@ _viminfo
 .bash_logout
 .cache/
 .config/
+.cscope/
 .cshrc
 .dbus/
 .dmrc

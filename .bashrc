@@ -225,8 +225,8 @@ cstag() {
     find $PWD -path ./.repo -prune -o -name '*.java' -print >> cscope.files
     echo Building Cscope database ...
     cscope -b -R -q -k
-    mv $PWD/cscope.* $HOME/cscope
-    export CSCOPE_DB=$HOME/cscope/cscope.out
+    mv $PWD/cscope.* $HOME/.cscope
+    export CSCOPE_DB=$HOME/.cscope/cscope.out
 }
 
 export PATH=$PATH:$HOME/bin
